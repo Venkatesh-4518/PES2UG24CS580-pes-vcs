@@ -44,7 +44,9 @@ void test_blob_storage(void) {
 
     printf("PASS: blob storage\n");
 }
-
+// This test checks that writing identical content twice results in the same object ID.
+// It verifies deduplication by comparing both generated IDs using memcmp.
+// If both IDs match, it confirms that duplicate data is not stored separately.
 void test_deduplication(void) {
     const char *content = "Duplicate content\n";
     ObjectID id1, id2;

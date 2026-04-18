@@ -3,12 +3,12 @@
 // Compile and run:
 //   gcc -Wall -Wextra -O2 -o test_objects test_objects.c object.c -lcrypto
 //   ./test_objects
-
-#include "pes.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include "pes.h"
 #include <string.h>
 #include <assert.h>
-#include <stdlib.h>
+
 
 // Forward declarations for object.c functions
 int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out);

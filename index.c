@@ -15,7 +15,7 @@
 // PROVIDED functions: index_find, index_remove, index_status
 // TODO functions:     index_load, index_save, index_add
 
-#include "index.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,6 +25,7 @@
 #include <dirent.h>
 #include <errno.h>
 #include <inttypes.h>
+#include "index.h"
 
 // Forward declaration from object.c
 int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out);
@@ -237,7 +238,7 @@ int index_save(const Index *index) {
         free(sorted);
         return -1;
     }
-    if (fclose(f) != 0) {
+    if (fclose(f)!= 0) {
         unlink(tmp_path);
         free(sorted);
         return -1;

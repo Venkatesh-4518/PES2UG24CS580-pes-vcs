@@ -20,11 +20,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
-#include <fcntl.h>
 #include <dirent.h>
 #include <errno.h>
 #include <inttypes.h>
 #include "index.h"
+
+#include <fcntl.h>
 #include <unistd.h>
 // Forward declaration from object.c
 int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out);

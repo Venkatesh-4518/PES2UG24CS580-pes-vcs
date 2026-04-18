@@ -394,7 +394,7 @@ The test program verifies:
 
 ### What to Implement
 
-Open `tree.c`. Implement the function marked `// TODO`:
+Open `tree.c`.
 
 1. **`tree_from_index`** — Builds a tree hierarchy from the index.
    - Handles nested paths: `"src/main.c"` must create a `src` subtree
@@ -426,7 +426,7 @@ The test program verifies:
 
 ### What to Implement
 
-Open `index.c`. Three functions are marked `// TODO`:
+Open `index.c`. 
 
 1. **`index_load`** — Reads the text-based `.pes/index` file into an `Index` struct.
    - If the file doesn't exist, initializes an empty index (this is not an error)
@@ -484,7 +484,7 @@ cat .pes/index    # Human-readable text format
 
 ### What to Implement
 
-Open `commit.c`. One function is marked `// TODO`:
+Open `commit.c`. 
 
 1. **`commit_create`** — The main commit function:
    - Builds a tree from the index using `tree_from_index()` (**not** from the working directory — commits snapshot the staged state)

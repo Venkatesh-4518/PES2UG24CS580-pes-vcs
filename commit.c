@@ -13,12 +13,11 @@
 //
 // PROVIDED functions: commit_parse, commit_serialize, commit_walk, head_read, head_update
 // TODO functions:     commit_create
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "commit.h"
 #include "index.h"
 #include "tree.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <inttypes.h>
 #include <time.h>
@@ -101,7 +100,7 @@ int commit_serialize(const Commit *commit, void **data_out, size_t *len_out) {
     return 0;
 }
 
-// Walk commit history from HEAD to the root.
+
 int commit_walk(commit_walk_fn callback, void *ctx) {
     ObjectID id;
     if (head_read(&id) != 0) return -1;

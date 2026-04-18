@@ -3,13 +3,13 @@
 // Compile and run:
 //   make test_tree
 //   ./test_tree
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "pes.h"
 #include "tree.h"
-#include <stdio.h>
 #include <string.h>
 #include <assert.h>
-#include <stdlib.h>
+
 
 void test_tree_roundtrip(void) {
     // Build a tree manually

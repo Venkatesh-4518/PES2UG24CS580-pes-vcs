@@ -21,12 +21,11 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <unistd.h>
 #include <dirent.h>
 #include <errno.h>
 #include <inttypes.h>
 #include "index.h"
-
+#include <unistd.h>
 // Forward declaration from object.c
 int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out);
 
@@ -66,9 +65,9 @@ int index_remove(Index *index, const char *path) {
 int index_status(const Index *index) {
     printf("Staged changes:\n");
     int staged_count = 0;
-    // Note: A true Git implementation deeply diffs against the HEAD tree here. 
-    // For this lab, displaying indexed files represents the staging intent.
-    for (int i = 0; i < index->count; i++) {
+    
+    for (int i = 0; i < index->count;i++) 
+    {
         printf("  staged:     %s\n", index->entries[i].path);
         staged_count++;
     }

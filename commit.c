@@ -63,9 +63,9 @@ int commit_parse(const void *data, size_t len, Commit *commit_out) {
     *last_space = '\0';
     snprintf(commit_out->author, sizeof(commit_out->author), "%s", author_buf);
     commit_out->timestamp = ts;
-    p = strchr(p, '\n') + 1;  // skip author line
-    p = strchr(p, '\n') + 1;  // skip committer line
-    p = strchr(p, '\n') + 1;  // skip blank line
+    p = strchr(p, '\n') + 1;  
+    p = strchr(p, '\n') + 1;  
+    p = strchr(p, '\n') + 1;  
 
     snprintf(commit_out->message, sizeof(commit_out->message), "%s", p);
     return 0;

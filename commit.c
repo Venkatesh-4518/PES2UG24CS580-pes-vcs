@@ -15,13 +15,13 @@
 // TODO functions:     commit_create
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "commit.h"
 #include "index.h"
 #include "tree.h"
 #include <string.h>
 #include <inttypes.h>
 #include <time.h>
-#include <unistd.h>
 #include <fcntl.h>
 
 // Forward declarations (implemented in object.c)
